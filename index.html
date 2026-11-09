@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Language is set to English for accessibility and screen readers -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag makes the page scale correctly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Imdad ullah Barki, aspiring junior web developer.">
+    <title>Imdad ullah Barki | Junior Web Developer Portfolio</title>
+    <!-- Link to the external stylesheet (no inline CSS is used anywhere) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header: site owner's name and the main navigation bar -->
+    <header class="site-header">
+        <h1 class="site-title">Imdad ullah Barki</h1>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About section: profile picture and short introduction -->
+        <section id="about" class="section section-light">
+            <div class="about-content">
+                <img class="profile-pic" src="images/profile.jpg" alt="Photo of Imdad ullah Barki">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm Imdad ullah Barki, a computer science student who loves turning ideas into
+                        clean, accessible web pages. I am currently learning the fundamentals of front-end
+                        development and am looking for a junior web developer internship where I can grow.
+                    </p>
+                    <p>
+                        When I'm not coding, I enjoy solving puzzles, reading about new technologies and
+                        contributing to small open-source projects. I am a fast learner, a team player and
+                        always curious about how things work on the web.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section: unordered list of technical skills shown in a grid -->
+        <section id="skills" class="section section-dark">
+            <h2>Technical Skills</h2>
+            <ul class="skills-grid">
+                <li>HTML5 &amp; Semantic Markup</li>
+                <li>CSS3, Flexbox &amp; Grid</li>
+                <li>Git &amp; GitHub</li>
+                <li>Responsive Design</li>
+                <li>JavaScript (learning)</li>
+                <li>Python Basics</li>
+            </ul>
+        </section>
+
+        <!-- Projects section: table listing past projects and achievements -->
+        <section id="projects" class="section section-light">
+            <h2>Projects &amp; Achievements</h2>
+            <div class="table-wrapper">
+                <table>
+                    <caption>Selected academic projects and achievements</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Project</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Student Library System</td>
+                            <td>A console application to manage book records, built as a semester project.</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr>
+                            <td>Recipe Landing Page</td>
+                            <td>A responsive multi-section website built with HTML and CSS.</td>
+                            <td>2026</td>
+                        </tr>
+                        <tr>
+                            <td>Dean's Honor List</td>
+                            <td>Academic achievement awarded for outstanding semester GPA.</td>
+                            <td>2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact section: form with text, email and radio inputs -->
+        <section id="contact" class="section section-dark">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="#" method="post">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <!-- Radio button group: only one reason can be selected -->
+                <fieldset>
+                    <legend>Reason for Contact</legend>
+                    <label class="radio-label">
+                        <input type="radio" name="reason" value="job-offer" checked> Job Offer
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="reason" value="general-query"> General Query
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="reason" value="feedback"> Feedback
+                    </label>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer: copyright notice and social links -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Imdad ullah Barki. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/imdadullahbarki007" target="_blank" rel="noopener">GitHub</a>
+            |
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

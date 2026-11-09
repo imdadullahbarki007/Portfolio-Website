@@ -1,0 +1,254 @@
+/* ==========================================================
+   Color palette and design tokens (CSS custom properties)
+   ========================================================== */
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --accent: #06b6d4;
+    --text: #1f2937;
+    --text-light: #f9fafb;
+    --bg-light: #f3f4f6;
+    --bg-dark: #e0e7ff;
+    --border: #c7d2fe;
+}
+
+/* Global reset: remove default spacing and use border-box sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem 0;
+}
+
+.site-title {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+}
+
+/* Navigation: flexbox lays links out horizontally with even spacing */
+.site-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    display: block;
+    padding: 0.9rem 1.2rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* Hover effect: link color changes when the mouse is over it */
+.site-nav a:hover {
+    color: #fde047;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Shared section styles ---------- */
+.section {
+    padding: 3rem 1.5rem;
+}
+
+.section h2 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+/* Alternating backgrounds make each section visually distinct */
+.section-light {
+    background-color: var(--bg-light);
+}
+
+.section-dark {
+    background: linear-gradient(180deg, var(--bg-dark), #ffffff);
+}
+
+/* ---------- About section ---------- */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    text-align: left;
+}
+
+/* Circular, responsive profile picture */
+.profile-pic {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+}
+
+/* ---------- Skills section ---------- */
+/* CSS Grid creates a neat 3-column layout for the skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.skills-grid li {
+    background-color: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ---------- Projects table ---------- */
+.table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    padding: 0.5rem;
+    font-style: italic;
+}
+
+th,
+td {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-weight: 500;
+}
+
+/* Clean input styling: padding, rounded corners and subtle border */
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    padding: 0.7rem 0.9rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Focus state: border color changes when the field is selected */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus {
+    border-color: var(--primary);
+}
+
+fieldset {
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem;
+}
+
+.radio-label {
+    display: block;
+    font-weight: 400;
+}
+
+button[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background-color: var(--text);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.site-footer p {
+    margin: 0.3rem 0;
+}
+
+.site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive layout for small screens ---------- */
+@media (max-width: 700px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
